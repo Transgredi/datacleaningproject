@@ -1,6 +1,8 @@
 ---
 title: "Untitled"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     fig_caption: yes
     toc: yes
