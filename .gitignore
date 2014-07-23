@@ -4,8 +4,8 @@
 
 dataset.zip
 
-UCI HAR Dataset/activity_labels.txt
+UCI HAR Dataset/
 
-UCI HAR Dataset/features_info.txt
 
-*.txt
+
+
