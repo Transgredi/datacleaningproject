@@ -11,18 +11,35 @@ file.testy          <- "UCI HAR Dataset/test/y_test.txt"
 file.trainsubject   <- "UCI HAR Dataset/train/subject_train.txt"
 file.trainx         <- "UCI HAR Dataset/train/X_train.txt"
 file.trainy         <- "UCI HAR Dataset/train/y_train.txt"
+file.features       <- "UCI HAR Dataset/features.txt"
+file.labels         <- "UCI HAR Dataset/activity_labels.txt"
 
-tests <- read.table(file.testsubject)
-testx <- read.table(file.testx, colClasses = "character")
-testy <- read.table(file.testy)
-trains <- read.table(file.trainsubject)
-trainx <- read.table(file.trainx, colClasses = "character")
-trainy <- read.table(file.trainy)
+features      <- read.table(file.features)
+labels        <- read.table(file.labels)
+names(labels) <- c("Activity", "Name")
+
+tests         <- read.table(file.testsubject)
+testx         <- read.table(file.testx)
+testy         <- read.table(file.testy)
+names(tests)  <- "Subjects"
+tests$Type    <- "Test"
+names(testy)  <- c("Activity")
+names(testx)  <- features$V2
+
+trains        <- read.table(file.trainsubject)
+trainx        <- read.table(file.trainx)
+trainy        <- read.table(file.trainy)
+names(trains) <- "Subjects"
+trains$Type   <- "Train"
+names(trainy) <- c("Activity")
+names(trainx) <- features$V2
+
 print("All files read into sets.")
 
-dim(tests)
-dim(testx)
-dim(testy)
-dim(trains)
-dim(trainx)
-dim(trainy)
+combotrain            <- cbind(trainx, trains)
+combotrain            <- cbind(combotrain, trainy)
+combotest             <- cbind(testx, tests)
+combotest             <- cbind(combotest, testy)
+combofinal            <- rbind(combotrain, combotest)
+combofinal            <- arrange(join(combofinal, labels), Activity)
+combofinal$Activity   <- as.factor(combofinal$Activity)
