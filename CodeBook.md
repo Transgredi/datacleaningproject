@@ -22,12 +22,13 @@ tbodyjerkaccmz | Body jerk acceleration - mean value recorded for Z axis
 tbodygyromx | Gyroscope - mean value recorded for X axis
 tbodygyromy | Gyroscope - mean value recorded for Y axis
 tbodygyromz | Gyroscope - mean value recorded for Z axis
-tbodygyrojerkmx | Gyroscope mean value recorded for X axis
-tbodygyrojerkmy | 
-tbodygyrojerkmz |
-tbodyaccmagm |
-tgravaccmagm |
+tbodygyrojerkmx | Body jerk gyroscope - mean value recorded for X axis
+tbodygyrojerkmy | Body jerk gyroscope - mean value recorded for X axis
+tbodygyrojerkmz | Body jerk gyroscope - mean value recorded for X axis
+tbodyaccmagm | Body acceleration magnitude - mean value
+tgravaccmagm | Gravity acceleration magnitude - mean value
 tbodyaccjerkmagm |
+-----------------|-------------
 tbodygyromagm |
 tbodygyrojerkmagm |
 fbodyaccmx |
