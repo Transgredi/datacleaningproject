@@ -19,7 +19,7 @@ Download the file manually and extract the whole content into directory with the
 The script executes properly only if the `UCI HAR Dataset` directory and R script are stored in the same main directory.
 
 ### Files
-Following files are required to execute the whole `run_analysis.R` script properly
+Following files in the indicated locations are required to execute the whole `run_analysis.R` script properly:
 * UCI HAR Dataset/test/subject_test.txt
 * UCI HAR Dataset/test/X_test.txt
 * UCI HAR Dataset/test/y_test.txt
@@ -29,6 +29,6 @@ Following files are required to execute the whole `run_analysis.R` script proper
 * UCI HAR Dataset/features.txt
 * UCI HAR Dataset/activity_labels.txt
 
-## Assumptions
-  files location
-  plyr package 
+##Script tasks
+
+The script

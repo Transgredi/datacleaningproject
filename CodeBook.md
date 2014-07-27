@@ -3,97 +3,95 @@ Code Book for Data Cleaning project
 
 ## Columns codes and their meaning
 
-### Key remarks
-
 **Jerk** - body linear acceleration and angular velocity derived in time
 
-Column name | Column content
-------------|----------------
-activname | Name of the activity performed by the subject. Factor variable with six levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-subjects | Subject ID
-tbodyaccmx | Body acceleration - mean value recorded for X axis
-tbodyaccmy | Body acceleration - mean value recorded for Y axis
-tbodyaccmz | Body acceleration - mean value recorded for Z axis
-tgravaccmx | Gravity acceleration - mean value recorded for X axis
-tgravaccmy | Gravity acceleration - mean value recorded for Y axis
-tgravaccmz | Gravity acceleration - mean value recorded for Z axis
-tbodyjerkaccmx | Body jerk acceleration - mean value recorded for X axis
-tbodyjerkaccmy | Body jerk acceleration - mean value recorded for Y axis
-tbodyjerkaccmz | Body jerk acceleration - mean value recorded for Z axis
-tbodygyromx | Gyroscope - mean value recorded for X axis
-tbodygyromy | Gyroscope - mean value recorded for Y axis
-tbodygyromz | Gyroscope - mean value recorded for Z axis
-tbodygyrojerkmx | Body jerk gyroscope - mean value recorded for X axis
-tbodygyrojerkmy | Body jerk gyroscope - mean value recorded for Y axis
-tbodygyrojerkmz | Body jerk gyroscope - mean value recorded for Z axis
-tbodyaccmagm | Body acceleration magnitude of three-dimensional signals of three-dimensional signals - mean value
-tgravaccmagm | Gravity acceleration magnitude of three-dimensional signals - mean value
-tbodyaccjerkmagm | Jerk acceleration magnitude of three-dimensional signals - mean value
-tbodygyromagm | Gyroscope magnitude of three-dimensional signals - mean value
-tbodygyrojerkmagm | Gyroscope jerk - mean value
-fbodyaccmx | Body acceleration - frequency domain signal mean value for X axis
-fbodyaccmy | Body acceleration - frequency domain signal mean value for Y axis
-fbodyaccmz | Body acceleration - frequency domain signal mean value for Z axis
-fbodyaccmfreqx | Body acceleration - frequency domain signal mean value for X axis (weighted average of the frequency components)
-fbodyaccmfreqy | Body acceleration - frequency domain signal mean value for Y axis (weighted average of the frequency components)
-fbodyaccmfreqz | Body acceleration - frequency domain signal mean value for Z axis (weighted average of the frequency components)
-fbodyaccjerkmx | Jerk acceleration - frequency domain signal mean value for X axis
-fbodyaccjerkmy | Jerk acceleration - frequency domain signal mean value for Y axis
-fbodyaccjerkmz | Jerk acceleration - frequency domain signal mean value for Z axis
-fbodyaccjerkmfreqx | Jerk acceleration - frequency domain signal mean value for X axis (weighted average of the frequency components)
-fbodyaccjerkmfreqy | Jerk acceleration - frequency domain signal mean value for Y axis (weighted average of the frequency components)
-fbodyaccjerkmfreqz | Jerk acceleration - frequency domain signal mean value for Z axis (weighted average of the frequency components)
-fbodygyromx | Gyroscope - frequency domain signal mean value for X axis
-fbodygyromy | Gyroscope - frequency domain signal mean value for Y axis
-fbodygyromz | Gyroscope - frequency domain signal mean value for Z axis
-fbodygyromfreqx | Gyroscope - frequency domain signal mean value for X axis (weighted average of the frequency components)
-fbodygyromfreqy | Gyroscope - frequency domain signal mean value for Y axis (weighted average of the frequency components)
-fbodygyromfreqz | Gyroscope - frequency domain signal mean value for Z axis (weighted average of the frequency components)
-fbodyaccmagm | Body acceleration magnitude of three-dimensional signals - frequency domain signal mean value
-fbodyaccmagmfreq | Body acceleration magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
-fbodyaccjerkmagm | Jerk acceleration magnitude of three-dimensional signals - frequency domain signal mean value
-fbodyaccjerkmagmfreq | Jerk acceleration magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
-fbodygyromagm | Gyroscope magnitude of three-dimensional signals - frequency domain signal mean value
-fbodygyromagmfreq | Gyroscope magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
-fbodygyrojerkmagm | Gyroscope magnitude of three-dimensional signals - frequency domain signal mean value
-fbodygyrojerkmagmfreq | Gyroscope jerk magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
-angletbodaccmgrav | Angle between body acceleration mean value and gravity
-angletbodyaccjerkmgravm | Angle between jerk acceleration mean and gravity mean
-angletbodygyromgravm | Angle between gyroscope mean and gravity mean
-angletbodygyrojerkmgravm | Angle between gyroscope jerk mean and gravity mean
-anglexgravm | Angle between X axis and gravity mean
-angleygravm | Angle between Y axis and gravity mean
-anglezgravm | Angle between Z axis and gravity mean
-tbodyaccsx | Body acceleration - standard deviation value recorded for X axis
-tbodyaccsy | Body acceleration - standard deviation value recorded for Y axis
-tbodyaccsz | Body acceleration - standard deviation value recorded for Z axis
-tgravaccsx | Gravity acceleration - standard deviation value recorded for X axis
-tgravaccsy | Gravity acceleration - standard deviation value recorded for Y axis
-tgravaccsz | Gravity acceleration - standard deviation value recorded for Z axis
-tbodyaccjerksx | Body acceleration jerk - standard deviation value recorded for X axis
-tbodyaccjerksy | Body acceleration jerk - standard deviation value recorded for Y axis
-tbodyaccjerksz | Body acceleration jerk - standard deviation value recorded for Z axis
-tbodygyrosx | Gyroscope - standard deviation value recorded for X axis
-tbodygyrosy | Gyroscope - standard deviation value recorded for Y axis
-tbodygyrosz | Gyroscope - standard deviation value recorded for Z axis
-tbodygyrojerksx | Gyroscope - body jerk - standard deviation value recorded for X axis
-tbodygyrojerksy | Gyroscope - body jerk - standard deviation value recorded for Y axis
-tbodygyrojerksz | Gyroscope - body jerk - standard deviation value recorded for Z axis
-tbodyaccmags | Body acceleration magnitude - standard deviation value
-tgravaccmags | Gravity acceleration magnitude - standard deviation value
-tbodyaccjerkmags | Body jerk - acceleration magnitude - standard deviation value
-tbodygyromags | Gyroscope magnitude - standard deviation value
-tbodygyrojerkmags | Gyroscope - body jerk - standard deviation value
-fbodyaccsx | Body acceleration - frequency domain signal standard deviation value for X axis
-fbodyaccsy | Body acceleration - frequency domain signal standard deviation value for Y axis
-fbodyaccsz | Body acceleration - frequency domain signal standard deviation value for Z axis
-fbodyaccjerksx | Jerk acceleration - frequency domain signal standard deviation value for X axis
-fbodyaccjerksy | Jerk acceleration - frequency domain signal standard deviation value for Y axis
-fbodyaccjerksz | Jerk acceleration - frequency domain signal standard deviation value for Z axis
-fbodygyrosx | Gyroscope - frequency domain signal standard deviation value for X axis
-fbodygyrosy | Gyroscope - frequency domain signal standard deviation value for Y axis
-fbodygyrosz | Gyroscope - frequency domain signal standard deviation value for Z axis
-fbodyaccmags | Body acceleration magnitude - frequency domain signal standard deviation value
-fbodyaccjerkmags | Jerk acceleration magnitude - frequency domain signal standard deviation value
-fobdygyromags | Gyroscope magnitude - frequency domain signal standard deviation value
-fbodygyrojerkmags | Gyroscope magnitude - body jerk - frequency domain signal standard deviation value
+Column number |Column name | Column content
+------------|------------|----------------
+1. | activname | Name of the activity performed by the subject. Factor variable with six levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+2. | subjects | Subject ID
+3. | tbodyaccmx | Body acceleration - mean value recorded for X axis
+4. | tbodyaccmy | Body acceleration - mean value recorded for Y axis
+5. | tbodyaccmz | Body acceleration - mean value recorded for Z axis
+6. | tgravaccmx | Gravity acceleration - mean value recorded for X axis
+7. | tgravaccmy | Gravity acceleration - mean value recorded for Y axis
+8. | tgravaccmz | Gravity acceleration - mean value recorded for Z axis
+9. | tbodyjerkaccmx | Body jerk acceleration - mean value recorded for X axis
+10. | tbodyjerkaccmy | Body jerk acceleration - mean value recorded for Y axis
+11. | tbodyjerkaccmz | Body jerk acceleration - mean value recorded for Z axis
+12. | tbodygyromx | Gyroscope - mean value recorded for X axis
+13. | tbodygyromy | Gyroscope - mean value recorded for Y axis
+14. | tbodygyromz | Gyroscope - mean value recorded for Z axis
+15. | tbodygyrojerkmx | Body jerk gyroscope - mean value recorded for X axis
+16. | tbodygyrojerkmy | Body jerk gyroscope - mean value recorded for Y axis
+17. | tbodygyrojerkmz | Body jerk gyroscope - mean value recorded for Z axis
+18. | tbodyaccmagm | Body acceleration magnitude of three-dimensional signals of three-dimensional signals - mean value
+19. | tgravaccmagm | Gravity acceleration magnitude of three-dimensional signals - mean value
+20. | tbodyaccjerkmagm | Jerk acceleration magnitude of three-dimensional signals - mean value
+21. | tbodygyromagm | Gyroscope magnitude of three-dimensional signals - mean value
+22. | tbodygyrojerkmagm | Gyroscope jerk - mean value
+23. | fbodyaccmx | Body acceleration - frequency domain signal mean value for X axis
+24. | fbodyaccmy | Body acceleration - frequency domain signal mean value for Y axis
+25. | fbodyaccmz | Body acceleration - frequency domain signal mean value for Z axis
+26. | fbodyaccmfreqx | Body acceleration - frequency domain signal mean value for X axis (weighted average of the frequency components)
+27. | fbodyaccmfreqy | Body acceleration - frequency domain signal mean value for Y axis (weighted average of the frequency components)
+28. | fbodyaccmfreqz | Body acceleration - frequency domain signal mean value for Z axis (weighted average of the frequency components)
+29. | fbodyaccjerkmx | Jerk acceleration - frequency domain signal mean value for X axis
+30. | fbodyaccjerkmy | Jerk acceleration - frequency domain signal mean value for Y axis
+31. | fbodyaccjerkmz | Jerk acceleration - frequency domain signal mean value for Z axis
+32. | fbodyaccjerkmfreqx | Jerk acceleration - frequency domain signal mean value for X axis (weighted average of the frequency components)
+33. | fbodyaccjerkmfreqy | Jerk acceleration - frequency domain signal mean value for Y axis (weighted average of the frequency components)
+34. | fbodyaccjerkmfreqz | Jerk acceleration - frequency domain signal mean value for Z axis (weighted average of the frequency components)
+35. | fbodygyromx | Gyroscope - frequency domain signal mean value for X axis
+36. | fbodygyromy | Gyroscope - frequency domain signal mean value for Y axis
+37. | fbodygyromz | Gyroscope - frequency domain signal mean value for Z axis
+38. | fbodygyromfreqx | Gyroscope - frequency domain signal mean value for X axis (weighted average of the frequency components)
+39. | fbodygyromfreqy | Gyroscope - frequency domain signal mean value for Y axis (weighted average of the frequency components)
+40. | fbodygyromfreqz | Gyroscope - frequency domain signal mean value for Z axis (weighted average of the frequency components)
+41. | fbodyaccmagm | Body acceleration magnitude of three-dimensional signals - frequency domain signal mean value
+42. | fbodyaccmagmfreq | Body acceleration magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
+43. | fbodyaccjerkmagm | Jerk acceleration magnitude of three-dimensional signals - frequency domain signal mean value
+44. | fbodyaccjerkmagmfreq | Jerk acceleration magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
+45. | fbodygyromagm | Gyroscope magnitude of three-dimensional signals - frequency domain signal mean value
+46. | fbodygyromagmfreq | Gyroscope magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
+47. | fbodygyrojerkmagm | Gyroscope magnitude of three-dimensional signals - frequency domain signal mean value
+48. | fbodygyrojerkmagmfreq | Gyroscope jerk magnitude of three-dimensional signals - frequency domain signal mean value (weighted average of the frequency components)
+49. | angletbodaccmgrav | Angle between body acceleration mean value and gravity
+50. | angletbodyaccjerkmgravm | Angle between jerk acceleration mean and gravity mean
+51. | angletbodygyromgravm | Angle between gyroscope mean and gravity mean
+52. | angletbodygyrojerkmgravm | Angle between gyroscope jerk mean and gravity mean
+53. | anglexgravm | Angle between X axis and gravity mean
+54. | angleygravm | Angle between Y axis and gravity mean
+55. | anglezgravm | Angle between Z axis and gravity mean
+56. | tbodyaccsx | Body acceleration - standard deviation value recorded for X axis
+57. | tbodyaccsy | Body acceleration - standard deviation value recorded for Y axis
+58. | tbodyaccsz | Body acceleration - standard deviation value recorded for Z axis
+59. | tgravaccsx | Gravity acceleration - standard deviation value recorded for X axis
+60. | tgravaccsy | Gravity acceleration - standard deviation value recorded for Y axis
+61. | tgravaccsz | Gravity acceleration - standard deviation value recorded for Z axis
+62. | tbodyaccjerksx | Body acceleration jerk - standard deviation value recorded for X axis
+63. | tbodyaccjerksy | Body acceleration jerk - standard deviation value recorded for Y axis
+64. | tbodyaccjerksz | Body acceleration jerk - standard deviation value recorded for Z axis
+65. | tbodygyrosx | Gyroscope - standard deviation value recorded for X axis
+66. | tbodygyrosy | Gyroscope - standard deviation value recorded for Y axis
+67. | tbodygyrosz | Gyroscope - standard deviation value recorded for Z axis
+68. | tbodygyrojerksx | Gyroscope - body jerk - standard deviation value recorded for X axis
+69. | tbodygyrojerksy | Gyroscope - body jerk - standard deviation value recorded for Y axis
+70. | tbodygyrojerksz | Gyroscope - body jerk - standard deviation value recorded for Z axis
+71. | tbodyaccmags | Body acceleration magnitude - standard deviation value
+72. | tgravaccmags | Gravity acceleration magnitude - standard deviation value
+73. | tbodyaccjerkmags | Body jerk - acceleration magnitude - standard deviation value
+74. | tbodygyromags | Gyroscope magnitude - standard deviation value
+75. | tbodygyrojerkmags | Gyroscope - body jerk - standard deviation value
+76. | fbodyaccsx | Body acceleration - frequency domain signal standard deviation value for X axis
+77. | fbodyaccsy | Body acceleration - frequency domain signal standard deviation value for Y axis
+78. | fbodyaccsz | Body acceleration - frequency domain signal standard deviation value for Z axis
+79. | fbodyaccjerksx | Jerk acceleration - frequency domain signal standard deviation value for X axis
+80. | fbodyaccjerksy | Jerk acceleration - frequency domain signal standard deviation value for Y axis
+81. | fbodyaccjerksz | Jerk acceleration - frequency domain signal standard deviation value for Z axis
+82. | fbodygyrosx | Gyroscope - frequency domain signal standard deviation value for X axis
+83. | fbodygyrosy | Gyroscope - frequency domain signal standard deviation value for Y axis
+84. | fbodygyrosz | Gyroscope - frequency domain signal standard deviation value for Z axis
+85. | fbodyaccmags | Body acceleration magnitude - frequency domain signal standard deviation value
+86. | fbodyaccjerkmags | Jerk acceleration magnitude - frequency domain signal standard deviation value
+87. | fobdygyromags | Gyroscope magnitude - frequency domain signal standard deviation value
+88. | fbodygyrojerkmags | Gyroscope magnitude - body jerk - frequency domain signal standard deviation value
