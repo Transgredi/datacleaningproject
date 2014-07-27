@@ -1,12 +1,6 @@
----
-title: "Untitled"
-output:
-  pdf_document:
-    toc: yes
-  html_document:
-    fig_caption: yes
-    toc: yes
----
+Code Book for Data Cleaning project
+===================
+
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
