@@ -5,6 +5,8 @@ Code Book for Data Cleaning project
 
 Figures for variables in columns 3:88 are mean values of the raw data provided in the train and test data sets.
 
+For methodology of obtained figures in columns 3:88, please refer to the `features_info.txt` file available with the data sets.
+
 Definition of **jerk** - body linear acceleration and angular velocity derived in time.
 
 Column number |Column name | Column content
