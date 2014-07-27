@@ -4,6 +4,6 @@
 dataset.zip
 UCI HAR Dataset/
 datacleaningproject.Rproj
-
-
+.gitignore
+names.txt
 
