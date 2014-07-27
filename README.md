@@ -37,3 +37,8 @@ The script performs following tasks:
   + Bind train actual data with subject ID's and activity labels into one data frame
   + Bind test actual data with subject ID's and activity labels into one data frame
   + Give correct names for variables (AKA features)
+  + Assign activity label names
+* Create data set which consists of test and train data
+* Find only columns with mean and standard deviations. Extract those columns into a separate data set and calculate mean value for all cases at the level of activity and subject
+* Assign new column names which are shorter and more "tidy" (details are provided in the CodeBook.md)
+* Write the final data set down into a `aggregate.csv` file
