@@ -9,7 +9,7 @@ Code Book for Data Cleaning project
 
 Column name | Column content
 ------------|----------------
-activname | Name of the activity performed by the subject
+activname | Name of the activity performed by the subject. Factor variable with six levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 subjects | Subject ID
 tbodyaccmx | Body acceleration - mean value recorded for X axis
 tbodyaccmy | Body acceleration - mean value recorded for Y axis

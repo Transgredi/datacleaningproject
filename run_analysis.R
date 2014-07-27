@@ -1,8 +1,7 @@
-#Uncomment lines 3:5 to automatically download, save and unzip the file.
-#WARNING: unzip command doesnt' work on OS X.
+#Uncomment lines 2:4 to automatically download, save and unzip the file.
 #url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 #download.file(url,"dataset.zip","curl")
-#unzip("dataset")
+#unzip("dataset.zip")
 
 #plyr package is required to combine tables using arrange() and join() commands.
 library(plyr)
@@ -55,8 +54,9 @@ combotest             <- cbind(combotest, testy)
 combofinal            <- rbind(combotrain, combotest)
 #add new column with activities names
 combofinal            <- arrange(join(combofinal, labels), activid)
-#define column with activities ID's as factor.
+#define column with activity labels as factors.
 combofinal$activid    <- as.factor(combofinal$activid)
+combofinal$activname  <- as.factor(combofinal$activname)
 
 #get numbers of columns which contain phrases with "mean" or "std".
 n <- names(combofinal)
@@ -75,9 +75,9 @@ agr <- aggregate(combofinal[,1:86],
 #Renaming column names to match general convention of tidy data
 #and to make them shorter.
 #All column names are resolved in the CodeBook.md file.
-names(agr)[3]   <- "tbodyaccmx";            names(agr)[4]   <- "tbodyaccmy";
-names(agr)[5]   <- "tbodyaccmz";            names(agr)[6]   <- "tgravaccmx";
-names(agr)[7]   <- "tgravaccmy";            names(agr)[8]   <- "tgravaccmz";
+names(agr)[3]   <- "tbodyaccmx";            names(agr)[4]    <- "tbodyaccmy";
+names(agr)[5]   <- "tbodyaccmz";            names(agr)[6]    <- "tgravaccmx";
+names(agr)[7]   <- "tgravaccmy";            names(agr)[8]    <- "tgravaccmz";
 names(agr)[9]   <- "tbodyjerkaccmx";        names(agr)[10]   <- "tbodyjerkaccmy";
 names(agr)[11]  <- "tbodyjerkaccmz";        names(agr)[12]   <- "tbodygyromx";
 names(agr)[13]  <- "tbodygyromy";           names(agr)[14]   <- "tbodygyromz";
