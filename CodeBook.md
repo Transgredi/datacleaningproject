@@ -3,12 +3,14 @@ Code Book for Data Cleaning project
 
 ## Columns codes and their meaning
 
-**Jerk** - body linear acceleration and angular velocity derived in time
+Figures for variables in columns 3:88 are mean values of the raw data provided in the train and test data sets.
+
+Definition of **jerk** - body linear acceleration and angular velocity derived in time.
 
 Column number |Column name | Column content
 ------------|------------|----------------
-1. | activname | Name of the activity performed by the subject. Factor variable with six levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-2. | subjects | Subject ID
+1. | activname | Name of the activity performed by the subject. Stored as factor variable with six levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+2. | subjects | Subject ID's stored as integers (1:30)
 3. | tbodyaccmx | Body acceleration - mean value recorded for X axis
 4. | tbodyaccmy | Body acceleration - mean value recorded for Y axis
 5. | tbodyaccmz | Body acceleration - mean value recorded for Z axis

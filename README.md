@@ -4,7 +4,7 @@ Getting and Cleaning Data - Final Project
 ##Intro
 This a description of the final project of the Getting and Cleaning Data course on Coursera.
 
-The goal of the assignment was to obtain a set of source files and combined them into one, tidy data set.
+The goal of the assignment was to obtain a set of source files and combined them into one, tidy data set with mean vaules of means and standard deviations of measurments recorded by Smartlab team. Detailed information can be found in the `README.txt` file written by the authors of the experiment.
 
 Before executing the script, please verify your setup of R - the script requires `plyr` package installed (http://plyr.had.co.nz/). If it's missing, you have to install it on your own.
 
@@ -31,4 +31,9 @@ Following files in the indicated locations are required to execute the whole `ru
 
 ##Script tasks
 
-The script
+The script performs following tasks:
+* Load data stored in selected downloaded files into data frames (including features names and activity labels)
+* Combine data sets:
+** Bind train actual data with subject ID's and activity labels into one data frame
+** Bind test actual data with subject ID's and activity labels into one data frame
+** Give correct names for variables (AKA features)
