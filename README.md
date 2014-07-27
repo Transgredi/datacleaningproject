@@ -34,6 +34,6 @@ Following files in the indicated locations are required to execute the whole `ru
 The script performs following tasks:
 * Load data stored in selected downloaded files into data frames (including features names and activity labels)
 * Combine data sets:
-** Bind train actual data with subject ID's and activity labels into one data frame
-** Bind test actual data with subject ID's and activity labels into one data frame
-** Give correct names for variables (AKA features)
+  + Bind train actual data with subject ID's and activity labels into one data frame
+  + Bind test actual data with subject ID's and activity labels into one data frame
+  + Give correct names for variables (AKA features)
