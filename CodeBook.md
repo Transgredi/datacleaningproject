@@ -3,9 +3,9 @@ Code Book for Data Cleaning project
 
 Column name | Column content
 ------------|----------------
-activname |
-subjects |
-tbodyaccmx |
+activname | Name of the activity performed by the subject
+subjects | Subject ID
+tbodyaccmx | Body acceleration mean value in X axis
 tbodyaccmy |
 tbodyaccmz |
 tgravaccmx |
