@@ -1,25 +1,11 @@
----
-output: html_document
----
 Getting and Cleaning Data - Final Project
 ===================
 
+## Data source
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-# Getting and Cleaning Data - Final Project
-## Getting and Cleaning Data - Final Project
-### Getting and Cleaning Data - Final Project
+## Files
 
-Data source
-Files
-Assumptions
-  file location
+## Assumptions
+  files location
   plyr package 
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-Content Cell  | Content Cell

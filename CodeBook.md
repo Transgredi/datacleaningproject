@@ -1,10 +1,11 @@
 Code Book for Data Cleaning project
 ===================
 
-## Columns codes and meaning
+## Columns codes and their meaning
+
 ### Key remarks
 
-* Jerk - body linear acceleration and angular velocity derived in time
+**Jerk** - body linear acceleration and angular velocity derived in time
 
 Column name | Column content
 ------------|----------------
