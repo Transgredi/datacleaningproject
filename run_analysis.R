@@ -1,7 +1,6 @@
 #download and save file
 
 #url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-
 #download.file(url,"dataset.zip","curl")
 #unzip("dataset")
 
@@ -40,8 +39,10 @@ print("All files read into sets.")
 
 combotrain            <- cbind(trainx, trains)
 combotrain            <- cbind(combotrain, trainy)
+
 combotest             <- cbind(testx, tests)
 combotest             <- cbind(combotest, testy)
+
 combofinal            <- rbind(combotrain, combotest)
 combofinal            <- arrange(join(combofinal, labels), activid)
 combofinal$activid    <- as.factor(combofinal$activid)
@@ -58,51 +59,49 @@ agr <- aggregate(combofinal[,1:86],
 
 # renaming column names to match general convention of tidy data
 # and to sound more user friendly
-names(agr)[3]   <- "bodyaccmx";   names(agr)[4]   <- "bodyaccmy";
-names(agr)[5]   <- "bodyaccmx";   names(agr)[6]   <- "bodyaccmy";
-names(agr)[7]   <- "bodyaccmx";   names(agr)[8]   <- "bodyaccmy";
-names(agr)[9]   <- "bodyaccmx";  names(agr)[10]   <- "bodyaccmy";
-names(agr)[11]  <- "bodyaccmx";  names(agr)[12]   <- "bodyaccmy";
-names(agr)[13]  <- "bodyaccmx";  names(agr)[14]   <- "bodyaccmy";
-names(agr)[15]  <- "bodyaccmx";  names(agr)[16]   <- "bodyaccmy";
-names(agr)[17]  <- "bodyaccmx";  names(agr)[18]   <- "bodyaccmy";
-names(agr)[19]  <- "bodyaccmx";  names(agr)[20]   <- "bodyaccmy";
-names(agr)[21]  <- "bodyaccmx";  names(agr)[22]   <- "bodyaccmy";
-names(agr)[23]  <- "bodyaccmx";  names(agr)[24]   <- "bodyaccmy";
-names(agr)[25]  <- "bodyaccmx";  names(agr)[26]   <- "bodyaccmy";
-names(agr)[27]  <- "bodyaccmx";  names(agr)[28]   <- "bodyaccmy";
-names(agr)[29]  <- "bodyaccmx";  names(agr)[30]   <- "bodyaccmy";
-names(agr)[31]  <- "bodyaccmx";  names(agr)[32]   <- "bodyaccmy";
-names(agr)[33]  <- "bodyaccmx";  names(agr)[34]   <- "bodyaccmy";
-names(agr)[35]  <- "bodyaccmx";  names(agr)[36]   <- "bodyaccmy";
-names(agr)[37]  <- "bodyaccmx";  names(agr)[38]   <- "bodyaccmy";
-names(agr)[39]  <- "bodyaccmx";  names(agr)[40]   <- "bodyaccmy";
-names(agr)[41]  <- "bodyaccmx";  names(agr)[42]   <- "bodyaccmy";
-names(agr)[43]  <- "bodyaccmx";  names(agr)[44]   <- "bodyaccmy";
-names(agr)[45]  <- "bodyaccmx";  names(agr)[46]   <- "bodyaccmy";
-names(agr)[47]  <- "bodyaccmx";  names(agr)[48]   <- "bodyaccmy";
-names(agr)[49]  <- "bodyaccmx";  names(agr)[50]   <- "bodyaccmy";
-names(agr)[51]  <- "bodyaccmx";  names(agr)[52]   <- "bodyaccmy";
-names(agr)[53]  <- "bodyaccmx";  names(agr)[54]   <- "bodyaccmy";
-names(agr)[55]  <- "bodyaccmx";  names(agr)[56]   <- "bodyaccmy";
-names(agr)[57]  <- "bodyaccmx";  names(agr)[58]   <- "bodyaccmy";
-names(agr)[59]  <- "bodyaccmx";  names(agr)[60]   <- "bodyaccmy";
-names(agr)[61]  <- "bodyaccmx";  names(agr)[62]   <- "bodyaccmy";
-names(agr)[63]  <- "bodyaccmx";  names(agr)[64]   <- "bodyaccmy";
-names(agr)[65]  <- "bodyaccmx";  names(agr)[66]   <- "bodyaccmy";
-names(agr)[67]  <- "bodyaccmx";  names(agr)[68]   <- "bodyaccmy";
-names(agr)[69]  <- "bodyaccmx";  names(agr)[70]   <- "bodyaccmy";
-names(agr)[71]  <- "bodyaccmx";  names(agr)[72]   <- "bodyaccmy";
-names(agr)[73]  <- "bodyaccmx";  names(agr)[74]   <- "bodyaccmy";
-names(agr)[75]  <- "bodyaccmx";  names(agr)[76]   <- "bodyaccmy";
-names(agr)[77]  <- "bodyaccmx";  names(agr)[78]   <- "bodyaccmy";
-names(agr)[79]  <- "bodyaccmx";  names(agr)[80]   <- "bodyaccmy";
-names(agr)[81]  <- "bodyaccmx";  names(agr)[82]   <- "bodyaccmy";
-names(agr)[83]  <- "bodyaccmx";  names(agr)[84]   <- "bodyaccmy";
-names(agr)[85]  <- "bodyaccmx";  names(agr)[86]   <- "bodyaccmy";
-names(agr)[87]  <- "bodyaccmx";  names(agr)[88]   <- "bodyaccmy";
-
-
+names(agr)[3]   <- "tbodyaccmx";            names(agr)[4]   <- "tbodyaccmy";
+names(agr)[5]   <- "tbodyaccmz";            names(agr)[6]   <- "tgravaccmx";
+names(agr)[7]   <- "tgravaccmy";            names(agr)[8]   <- "tgravaccmz";
+names(agr)[9]   <- "tbodyjerkaccmx";        names(agr)[10]   <- "tbodyjerkaccmy";
+names(agr)[11]  <- "tbodyjerkaccmz";        names(agr)[12]   <- "tbodygyromx";
+names(agr)[13]  <- "tbodygyromy";           names(agr)[14]   <- "tbodygyromz";
+names(agr)[15]  <- "tgyrojerkmx";           names(agr)[16]   <- "tbodygyrojerkmy";
+names(agr)[17]  <- "tgyrojerkmz";           names(agr)[18]   <- "tbodyaccmagm";
+names(agr)[19]  <- "tgravaccmagm";          names(agr)[20]   <- "tbodyaccjerkmagm";
+names(agr)[21]  <- "tbodygyromagm";         names(agr)[22]   <- "tbodygyrojerkmagm";
+names(agr)[23]  <- "fbodyaccmx";            names(agr)[24]   <- "fbodyaccmy";
+names(agr)[25]  <- "fbodyaccmz";            names(agr)[26]   <- "fbodyaccmfreqx";
+names(agr)[27]  <- "fbodyaccmfreqy";        names(agr)[28]   <- "fbodyaccmfreqz";
+names(agr)[29]  <- "fbodyaccjerkmx";        names(agr)[30]   <- "fbodyaccjerkmy";
+names(agr)[31]  <- "fbodyaccjerkmz";        names(agr)[32]   <- "fbodyaccjerkmfreqx";
+names(agr)[33]  <- "fbodyaccjerkmfreqy";    names(agr)[34]   <- "fbodyaccjerkmfreqz";
+names(agr)[35]  <- "fbodygyromx";           names(agr)[36]   <- "fbodygyromy";
+names(agr)[37]  <- "fbodygyromz";           names(agr)[38]   <- "fbodygyromfreqx";
+names(agr)[39]  <- "fbodygyromfreqy";       names(agr)[40]   <- "fbodygyromfreqz";
+names(agr)[41]  <- "fbodyaccmagm";          names(agr)[42]   <- "fbodyaccmagmfreq";
+names(agr)[43]  <- "fbodyaccjerkmagm";      names(agr)[44]   <- "fbodyaccjerkmagmfreq";
+names(agr)[45]  <- "fbodygyromagm";         names(agr)[46]   <- "fbodygyromagmfreq";
+names(agr)[47]  <- "fbodygyrojerkmagm";     names(agr)[48]   <- "fbodygyrojerkmagmfreq";
+names(agr)[49]  <- "angletbodaccmgrav";     names(agr)[50]   <- "angletbodyaccjerkmgravm";
+names(agr)[51]  <- "angletbodygyromgravm";  names(agr)[52]   <- "angletbodygyrojerkmgravm";
+names(agr)[53]  <- "anglexgravm";           names(agr)[54]   <- "angleygravm";
+names(agr)[55]  <- "anglezgravm";           names(agr)[56]   <- "tbodyaccsx";
+names(agr)[57]  <- "tbodyaccsy";            names(agr)[58]   <- "tbodyaccsz";
+names(agr)[59]  <- "tgravaccsx";            names(agr)[60]   <- "tgravaccsy";
+names(agr)[61]  <- "tgravaccsz";            names(agr)[62]   <- "tbodyaccjerksx";
+names(agr)[63]  <- "tbodyaccjerksy";        names(agr)[64]   <- "tbodyaccjerksz";
+names(agr)[65]  <- "tbodygyrosx";           names(agr)[66]   <- "tbodygyrosy";
+names(agr)[67]  <- "tbodygyrosz";           names(agr)[68]   <- "tbodygyrojerksx";
+names(agr)[69]  <- "tbodygyrojerksy";       names(agr)[70]   <- "tbodygyrojerksz";
+names(agr)[71]  <- "tbodyaccmags";          names(agr)[72]   <- "tgravaccmags";
+names(agr)[73]  <- "tbodyaccjerkmags";      names(agr)[74]   <- "tbodygyromags";
+names(agr)[75]  <- "tbodygyrojerkmags";     names(agr)[76]   <- "fbodyaccsx";
+names(agr)[77]  <- "fbodyaccsy";            names(agr)[78]   <- "fbodyaccsz";
+names(agr)[79]  <- "fbodyaccjerksx";        names(agr)[80]   <- "fbodyaccjerksy";
+names(agr)[81]  <- "fbodyaccjerksz";        names(agr)[82]   <- "fbodygyrosx";
+names(agr)[83]  <- "fbodygyrosy";           names(agr)[84]   <- "fbodygyrosz";
+names(agr)[85]  <- "fbodyaccmags";          names(agr)[86]   <- "fbodyaccjerkmags";
+names(agr)[87]  <- "fobdygyromags";         names(agr)[88]   <- "fbodygyrojerkmags";
 
 write.table(agr,"aggregated.csv",
   sep = ",", quote = T, row.names = F, col.names = T)

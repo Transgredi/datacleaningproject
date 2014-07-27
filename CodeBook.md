@@ -1,19 +1,92 @@
 Code Book for Data Cleaning project
 ===================
 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Column name | Column content
+activname |
+subjects |
+tbodyaccmx |
+tbodyaccmy |
+tbodyaccmz |
+tgravaccmx |
+tgravaccmy |
+tgravaccmz |
+tbodyjerkaccmx |
+tbodyjerkaccmy |
+tbodyjerkaccmz |
+tbodygyromx |
+tbodygyromy |
+tbodygyromz |
+tgyrojerkmx |
+tbodygyrojerkmy |
+tgyrojerkmz |
+tbodyaccmagm |
+tgravaccmagm |
+tbodyaccjerkmagm |
+tbodygyromagm |
+tbodygyrojerkmagm |
+fbodyaccmx |
+fbodyaccmy |
+fbodyaccmz |
+fbodyaccmfreqx |
+fbodyaccmfreqy |
+fbodyaccmfreqz |
+fbodyaccjerkmx |
+fbodyaccjerkmy |
+fbodyaccjerkmz |
+fbodyaccjerkmfreqx |
+fbodyaccjerkmfreqy |
+fbodyaccjerkmfreqz |
+fbodygyromx |
+fbodygyromy |
+fbodygyromz |
+fbodygyromfreqx |
+fbodygyromfreqy |
+fbodygyromfreqz |
+fbodyaccmagm |
+fbodyaccmagmfreq |
+fbodyaccjerkmagm |
+fbodyaccjerkmagmfreq |
+fbodygyromagm |
+fbodygyromagmfreq |
+fbodygyrojerkmagm |
+fbodygyrojerkmagmfreq |
+angletbodaccmgrav |
+angletbodyaccjerkmgravm |
+angletbodygyromgravm |
+angletbodygyrojerkmgravm |
+anglexgravm |
+angleygravm |
+anglezgravm |
+tbodyaccsx |
+tbodyaccsy |
+tbodyaccsz |
+tgravaccsx |
+tgravaccsy |
+tgravaccsz |
+tbodyaccjerksx |
+tbodyaccjerksy |
+tbodyaccjerksz |
+tbodygyrosx |
+tbodygyrosy |
+tbodygyrosz |
+tbodygyrojerksx |
+tbodygyrojerksy |
+tbodygyrojerksz |
+tbodyaccmags |
+tgravaccmags |
+tbodyaccjerkmags |
+tbodygyromags |
+tbodygyrojerkmags |
+fbodyaccsx |
+fbodyaccsy |
+fbodyaccsz |
+fbodyaccjerksx |
+fbodyaccjerksy |
+fbodyaccjerksz |
+fbodygyrosx |
+fbodygyrosy |
+fbodygyrosz |
+fbodyaccmags |
+fbodyaccjerkmags |
+fobdygyromags |
+fbodygyrojerkmags |
