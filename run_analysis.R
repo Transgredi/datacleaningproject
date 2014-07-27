@@ -1,11 +1,13 @@
-#download and save file
-
+#Uncomment lines 3:5 to automatically download, save and unzip the file.
+#WARNING: unzip command doesnt' work on OS X.
 #url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 #download.file(url,"dataset.zip","curl")
 #unzip("dataset")
 
+#plyr package is required to combine tables using arrange() and join() commands.
 library(plyr)
 
+#File names and location loaded to individual variables.
 file.testsubject    <- "UCI HAR Dataset/test/subject_test.txt"
 file.testx          <- "UCI HAR Dataset/test/X_test.txt"
 file.testy          <- "UCI HAR Dataset/test/y_test.txt"
@@ -15,10 +17,14 @@ file.trainy         <- "UCI HAR Dataset/train/y_train.txt"
 file.features       <- "UCI HAR Dataset/features.txt"
 file.labels         <- "UCI HAR Dataset/activity_labels.txt"
 
+#Load features names and activity labels into data frames.
 features      <- read.table(file.features)
 labels        <- read.table(file.labels)
+
+#Manually insert column names for "labels" data frame.
 names(labels) <- c("activid", "activname")
 
+#Read actual data of test subjects.
 tests         <- read.table(file.testsubject)
 testx         <- read.table(file.testx)
 testy         <- read.table(file.testy)
@@ -27,6 +33,7 @@ tests$type    <- "test"
 names(testy)  <- c("activid")
 names(testx)  <- features$V2
 
+#Read actual data of train subjects.
 trains        <- read.table(file.trainsubject)
 trainx        <- read.table(file.trainx)
 trainy        <- read.table(file.trainy)
@@ -35,30 +42,39 @@ trains$type   <- "train"
 names(trainy) <- c("activid")
 names(trainx) <- features$V2
 
-print("All files read into sets.")
-
+#Combine all train data horizontally by binding columns:
+#actual values, subjects ID's and activities ID's.
 combotrain            <- cbind(trainx, trains)
 combotrain            <- cbind(combotrain, trainy)
-
+#Combine all test data horizontally by binding columns:
+#actual values, subjects ID's and activities ID's.
 combotest             <- cbind(testx, tests)
 combotest             <- cbind(combotest, testy)
 
+#combine train and test data vertically by row binding.
 combofinal            <- rbind(combotrain, combotest)
+#add new column with activities names
 combofinal            <- arrange(join(combofinal, labels), activid)
+#define column with activities ID's as factor.
 combofinal$activid    <- as.factor(combofinal$activid)
 
+#get numbers of columns which contain phrases with "mean" or "std".
 n <- names(combofinal)
 m <- grep("*[Mm]ean*",n)
 s <- grep("*std*",n)
 
+#Select only those columns with mean or standard deviation figures and preserve
+#columns with subjects ID's and activity labels.
 combofinal <- combofinal[,c(m,s,562:565)]
 
+#Calculate mean values for all columns for each subject in a given activity
 agr <- aggregate(combofinal[,1:86],
   list(activname = combofinal$activname, subjects = combofinal$subjects), mean)
 
 
-# renaming column names to match general convention of tidy data
-# and to sound more user friendly
+#Renaming column names to match general convention of tidy data
+#and to make them shorter.
+#All column names are resolved in the CodeBook.md file.
 names(agr)[3]   <- "tbodyaccmx";            names(agr)[4]   <- "tbodyaccmy";
 names(agr)[5]   <- "tbodyaccmz";            names(agr)[6]   <- "tgravaccmx";
 names(agr)[7]   <- "tgravaccmy";            names(agr)[8]   <- "tgravaccmz";
@@ -103,5 +119,6 @@ names(agr)[83]  <- "fbodygyrosy";           names(agr)[84]   <- "fbodygyrosz";
 names(agr)[85]  <- "fbodyaccmags";          names(agr)[86]   <- "fbodyaccjerkmags";
 names(agr)[87]  <- "fobdygyromags";         names(agr)[88]   <- "fbodygyrojerkmags";
 
+#Save the data frame as a CSV file.
 write.table(agr,"aggregated.csv",
   sep = ",", quote = T, row.names = F, col.names = T)
