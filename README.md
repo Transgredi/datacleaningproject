@@ -42,3 +42,5 @@ The script performs following tasks:
 * Find only columns with mean and standard deviations. Extract those columns into a separate data set and calculate mean value for all cases at the level of activity and subject
 * Assign new column names which are shorter and more "tidy" (details are provided in the CodeBook.md)
 * Write the final data set down into a `aggregate.csv` file
+
+Details of the tasks are available as comments within the `run_analysis.R` script.
