@@ -2,6 +2,7 @@ Code Book for Data Cleaning project
 ===================
 
 Column name | Column content
+------------|----------------
 activname |
 subjects |
 tbodyaccmx |
